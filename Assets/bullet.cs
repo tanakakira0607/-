@@ -1,0 +1,16 @@
+using UnityEngine;
+
+public class Bullet : MonoBehaviour
+{
+    public float speed = 20f;
+
+    void Start()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        rb.linearVelocity = transform.right * speed;
+
+        // 5ïbå„Ç…çÌèú
+        Destroy(gameObject, 5f);
+    }
+}
